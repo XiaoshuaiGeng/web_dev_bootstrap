@@ -1,0 +1,29 @@
+.nav-bg-dark{
+    background-color: #27293D;
+    color:#D0D0D4;
+}
+
+.bgcolor-purple{
+    background-color: #27293D;
+}
+
+.nav-text{
+    color:#212529;
+}
+
+.nav-text:hover{
+    color: #595C5F;
+
+}
+
+.footer-text{
+    color:#D0D0D4;
+    text-decoration: none;
+    border-bottom-color: #D0D0D4;
+}
+
+.footer-text:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
