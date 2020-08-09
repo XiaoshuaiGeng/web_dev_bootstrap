@@ -26,12 +26,12 @@
     <!-- Top Navigation -->
     <nav class="navbar navbar-expand-sm navbar-dark nav-bg-dark px-sm-4 sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand " style="font-family: 'Lobster', cursive; font-size: xx-large" href="index.html">FIBER</a>
+            <a class="navbar-brand " style="font-family: 'Lobster', cursive; font-size: xx-large" href="index.php">FIBER</a>
 
             <form class="col-6">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search">
-                    <button class="btn btn-outline-dark" type="submit" id="submit">
+                    <button class="btn btn-outline-light " type="submit" id="submit">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                             <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
@@ -62,7 +62,7 @@
 
         <ul class="collapse navbar-collapse nav nav-justified flex-column flex-sm-row navbar-light bg-light" id="navLinks">
             <li class="nav-item">
-                <a class="nav-link nav-text" href="index.html">Home</a>
+                <a class="nav-link nav-text" href="index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-text" href="#">Buy & Sell</a>
@@ -122,7 +122,7 @@
 
                 </div>
                 <div class = "flex-fill text-center align-self-center">
-                    <img class="mt-md-4" src="../images/the_good_exchange.png" height="156" width="320"/>
+                    <img class="mt-md-4" src="../images/the_good_exchange.png" alt="The Good Exchange" height="156" width="320"/>
                 </div>
             </div>
 
@@ -138,7 +138,7 @@
                 <div class="col-md-4">
                     <h3>FIBER</h3>
                     <div class="list-group list-group-flush py-3">
-                        <a class="list-group-item nav-bg-dark footer-text" href="index.html">Home</a>
+                        <a class="list-group-item nav-bg-dark footer-text" href="index.php">Home</a>
                         <a class="list-group-item nav-bg-dark footer-text" href="login.html">Sign In</a>
 
                     </div>

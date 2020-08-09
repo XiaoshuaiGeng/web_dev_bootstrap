@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9fbac89e-e45b-4e31-87a7-8f9672ddede0" name="geng115_myweb" url="http://geng115.myweb.cs.uwindsor.ca/60334/project/">
+        <fileTransfer rootFolder="/public_html/60334/project" accessType="SFTP" host="myweb.cs.uwindsor.ca" port="22" sshConfigId="df181efa-f73e-41c8-8e09-47ee8a21544b" sshConfig="geng115@myweb.cs.uwindsor.ca:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
