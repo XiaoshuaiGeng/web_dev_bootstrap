@@ -26,6 +26,8 @@
                 session_start();
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $username;
+                $_SESSION['timeout'] = time();
+
             }
 
         }else{
@@ -33,7 +35,7 @@
         }
         $stmt->close();
     }
-
+    $conn->close();
 
     function mysql_entities_fix_string($connection, $string)
     {
@@ -44,5 +46,5 @@
         return $connection->real_escape_string($string);
     }
 
-    $conn->close();
+
 

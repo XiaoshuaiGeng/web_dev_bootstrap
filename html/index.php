@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
 
+<!--    <script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
@@ -41,9 +42,22 @@
             </form>
 
             <div class="navbar-nav d-flex flex-sm-row flex-column">
-                <a class="nav-link" href="login.html">Sign In</a>
+                <?php
+                    include '../php/user_profile.php';
+
+                ?>
+<!--                <a class="nav-link" href="login.html" id = "signIn">Sign In</a>-->
+
+<!--                <div class="dropdown mx-3">-->
+<!---->
+<!--                    <a class="nav-link dropdown-toggle" href="#" role="button" id="userProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="userProfile">-->
+<!--                        <a class="dropdown-item" href="#">Edit Profile</a>-->
+<!--                        <a class="dropdown-item" href="#">Log Out</a>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <div class="nav-pills">
-                    <a class="nav-link btn-primary" href="#">Post Ad</a>
+                    <a class="nav-link btn-primary text-center" href="#">Post Ad</a>
                 </div>
 
             </div>
@@ -60,12 +74,12 @@
     <!--    Sub Headers-->
     <nav class="navbar navbar-expand-sm"  >
 
-        <ul class="collapse navbar-collapse nav nav-justified flex-column flex-sm-row navbar-light bg-light" id="navLinks">
+        <ul class="collapse navbar-collapse nav nav-justified flex-column flex-sm-row navbar-dark bg-light border-bottom shadow" id="navLinks">
             <li class="nav-item">
                 <a class="nav-link nav-text" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-text" href="#">Buy & Sell</a>
+                <a class="nav-link nav-text" href="buy_and_sell.php">Buy & Sell</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-text" href="#">Services</a>
@@ -139,7 +153,7 @@
                     <h3>FIBER</h3>
                     <div class="list-group list-group-flush py-3">
                         <a class="list-group-item nav-bg-dark footer-text" href="index.php">Home</a>
-                        <a class="list-group-item nav-bg-dark footer-text" href="login.html">Sign In</a>
+                        <a class="list-group-item nav-bg-dark footer-text" href="buy_and_sell.php">Buy & Sell</a>
 
                     </div>
                 </div>
