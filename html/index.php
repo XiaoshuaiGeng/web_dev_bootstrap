@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
 
-<!--    <script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
-
+    <script src="http://geng115.myweb.cs.uwindsor.ca/60334/project/js/search_item.js"></script>
     <title>FIBER</title>
 </head>
 <body style="background-color: #F7F7F7">
@@ -29,9 +30,10 @@
         <div class="container-fluid">
             <a class="navbar-brand " style="font-family: 'Lobster', cursive; font-size: xx-large" href="index.php">FIBER</a>
 
-            <form class="col-6">
+            <form class="col-6 d-block">
+
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" name="search_item" id="search_bar" class="form-control" placeholder="Search">
                     <button class="btn btn-outline-light " type="submit" id="submit">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -39,12 +41,19 @@
                         </svg>
                     </button>
                 </div>
+
+<!--                search results will be displayed here-->
+                <div class="dropdown-menu mx-3" id="result" style="width: inherit;">
+                </div>
+
+
+
+
             </form>
 
             <div class="navbar-nav d-flex flex-sm-row flex-column">
                 <?php
-                    include '../php/user_profile.php';
-
+                include '../php/user_profile.php';
                 ?>
 <!--                <a class="nav-link" href="login.html" id = "signIn">Sign In</a>-->
 
@@ -57,7 +66,24 @@
 <!--                    </div>-->
 <!--                </div>-->
                 <div class="nav-pills">
-                    <a class="nav-link btn-primary text-center" href="#">Post Ad</a>
+                    <?php
+                    session_start();
+
+                    if(isset($_SESSION['login'])){
+                        $login_status = $_SESSION['login'];
+                        $username = $_SESSION['username'];
+
+                        echo <<<END
+                        <a class="nav-link btn-primary text-center" href="create_ad.php">Post Ad</a>
+END;
+                    }else{
+                        echo <<<END
+                        <a class="nav-link btn-primary text-center" href="login.html">Post Ad</a>
+END;
+
+                    }
+
+                    ?>
                 </div>
 
             </div>
@@ -80,9 +106,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-text" href="buy_and_sell.php">Buy & Sell</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-text" href="#">Services</a>
             </li>
         </ul>
     </nav>

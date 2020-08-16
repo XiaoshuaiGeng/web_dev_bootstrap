@@ -21,7 +21,7 @@
     <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
     <script src="http://geng115.myweb.cs.uwindsor.ca/60334/project/js/search_item.js"></script>
     <script src = "http://geng115.myweb.cs.uwindsor.ca/60334/project/js/sort_item.js"></script>
-    <title>FIBER - Buy & Sell</title>
+    <title>FIBER - Posted Items</title>
 </head>
 <body>
 <!-- Top Navigation -->
@@ -103,91 +103,73 @@ END;
 </nav>
 
 <!--    main content-->
-    <div class="container-fluid py-5" style="background-color: #F7F7F7;">
+<div class="container-fluid py-5" style="background-color: #F7F7F7;">
 
-        <div class="container my-5 pb-5" style="background-color: white">
-            <div class="row">
+    <div class="container rounded my-5 pb-5" style="background-color: white">
+        <div class="row">
 
-                <div class="col-md-4">
-                    <ul class="list-group-flush p-5">
-                        <h5>Filter</h5>
-                        <hr class="my-2">
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="price_low" name="price" class="custom-control-input" value="low">
-                                <label for="price_low" class="custom-control-label">Price from low to high</label>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="price_high" name="price" class="custom-control-input" value="high">
-                                <label for="price_high" class="custom-control-label">Price from high to low</label>
-                            </div>
-                        </li>
+            <div class="col">
+                <div class="row" id="items">
+                    <?php
+                        include '../php/check_session.php';
+                        if(!empty($username)){
+                            include '../php/load_user_items.php';
 
-                    </ul>
-                </div>
-                <div class="col-md-8">
-                    <div class="row" id="items">
-                        <?php
-                            if(isset($_REQUEST['search_item'])){
-                                $search_item = $_REQUEST['search_item'];
-                                include "../php/load_items.php";
-                            }else{
-                                include '../php/load_items.php';
-                            }
+                        }else{
+                            echo "<div class='h6'>No session exist, please sign in first</div>>";
+                        }
 
-                        ?>
+                    ?>
 
-                    </div>
                 </div>
             </div>
-
-
         </div>
+
+
     </div>
+</div>
 
-    <!--    footer-->
-        <footer class="nav-bg-dark">
-            <div class="container py-5">
+<!--    footer-->
+<footer class="nav-bg-dark">
+    <div class="container py-5">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>FIBER</h3>
-                        <div class="list-group list-group-flush py-3">
-                            <a class="list-group-item nav-bg-dark footer-text" href="index.php">Home</a>
-                            <a class="list-group-item nav-bg-dark footer-text" href="buy_and_sell.php">Buy & Sell</a>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>FIBER</h3>
+                <div class="list-group list-group-flush py-3">
+                    <a class="list-group-item nav-bg-dark footer-text" href="index.php">Home</a>
+                    <a class="list-group-item nav-bg-dark footer-text" href="buy_and_sell.php">Buy & Sell</a>
 
-                        </div>
-                    </div>
                 </div>
-                <hr class="my-3" style="background-color: #D0D0D4">
-                <div class="row p-3 justify-content-between">
-                    <div class="col-md-8">
-                        <small>Developed & Designed by
-                            <a href="mailto:geng115@uwindsor.ca">Xiaoshuai Geng - geng115@uwindsor.ca</a>
-                        </small>
-                    </div>
+            </div>
+        </div>
+        <hr class="my-3" style="background-color: #D0D0D4">
+        <div class="row p-3 justify-content-between">
+            <div class="col-md-8">
+                <small>Developed & Designed by
+                    <a href="mailto:geng115@uwindsor.ca">Xiaoshuai Geng - geng115@uwindsor.ca</a>
+                </small>
+            </div>
 
-                    <div class="col-md-2 my-md-n3 ">
-                        <div class="d-flex justify-content-end">
+            <div class="col-md-2 my-md-n3 ">
+                <div class="d-flex justify-content-end">
 
-                            <a class="btn btn-dark rounded-circle mx-auto" href="https://github.com/XiaoshuaiGeng"  target="_blank" role="button">
+                    <a class="btn btn-dark rounded-circle mx-auto" href="https://github.com/XiaoshuaiGeng"  target="_blank" role="button">
                                 <span style="font-size: 25px;">
                                     <i class="fab fa-github"></i>
                                 </span>
-                            </a>
+                    </a>
 
-                            <a class="btn btn-dark rounded-circle mx-auto" href="https://www.linkedin.com/in/xiaoshuai-geng-20804a194/"  target="_blank" role="button">
+                    <a class="btn btn-dark rounded-circle mx-auto" href="https://www.linkedin.com/in/xiaoshuai-geng-20804a194/"  target="_blank" role="button">
                                 <span style="font-size: 25px;">
                                     <i class="fab fa-linkedin-in"></i>
                                 </span>
-                            </a>
-                        </div>
-                    </div>
-
+                    </a>
                 </div>
             </div>
-        </footer>
+
+        </div>
+    </div>
+</footer>
 </body>
 </html>

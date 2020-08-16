@@ -7,5 +7,5 @@ if (isset($_SESSION['login']) && $_REQUEST['logout'] == true){
     //destroy current session
     session_destroy();
 }
-header("Location: ../html/index.php");
+header("Location: http://geng115.myweb.cs.uwindsor.ca/60334/project/html/index.php");
 

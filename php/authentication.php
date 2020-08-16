@@ -9,8 +9,9 @@
     if(isset($_REQUEST['username']) && isset($_REQUEST['password'])){
         $username = mysql_entities_fix_string($conn, $_REQUEST['username']);
         $password = mysql_entities_fix_string($conn, $_REQUEST['password']);
+        $password = hash('ripemd128',$password);
 
-        $query = "SELECT username, password FROM user_profiles WHERE username = ? and password = ?";
+        $query = "SELECT `username`, `password` FROM user_profiles WHERE username = ? and password = ?";
 
         $stmt = $conn->prepare($query);
         $stmt->bind_param('ss',$username,$password);

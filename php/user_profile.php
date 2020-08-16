@@ -21,9 +21,9 @@ END;
     echo <<<END
         </a>
         <div class="dropdown-menu" aria-labelledby="userProfile">
-            <a class="dropdown-item" href="#">Edit Profile</a>
+            <a class="dropdown-item" href="http://geng115.myweb.cs.uwindsor.ca/60334/project/html/posted_items.php">View Posted Items</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../php/logout.php?logout=true" >Log Out</a>
+            <a class="dropdown-item" href="http://geng115.myweb.cs.uwindsor.ca/60334/project/php/logout.php?logout=true" >Log Out</a>
             
         </div>
     </div>
@@ -32,7 +32,7 @@ END;
 
 }else{
     echo <<<END
-    <a class="nav-link" href="login.html" id = "signIn">Sign In</a>
+    <a class="nav-link" href="http://geng115.myweb.cs.uwindsor.ca/60334/project/html/login.html" id = "signIn">Sign In</a>
 END;
 }
 ?>
