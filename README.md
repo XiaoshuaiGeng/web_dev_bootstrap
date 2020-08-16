@@ -2,7 +2,7 @@
 * FRONT-END: HTML5, CSS, Javascript, JQuery, AJAX
 * BACK-END: PHP7.2, MYSQL DB
 
-###Different User Levels
+### Different User Levels
 As what I proposed in project proposal document, there are two different
 user levels, and they have different access to the database.
 
@@ -19,7 +19,7 @@ the password was secure hashed into tokens and saved in the database
 Since the website designed by a P2P business model, so guest users do not have
 access to the database until they sign up as an authenticated user.
 
-###Responsive
+### Responsive
 Bootstrap UI framework was used to make the webpages responsive. Most of the
 columns were given multiple class attributes to match different device views.
 
